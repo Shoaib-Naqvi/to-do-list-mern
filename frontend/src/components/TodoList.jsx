@@ -1,6 +1,6 @@
-import TodoItem from './TodoItem';
+import TodoItem from "./TodoItem";
 
-export default function TodoList({ todos, onToggle, onDelete, onEdit }) {
+function TodoList({ todos, onToggle, onDelete, onEdit }) {
     if (!todos.length) return <p className="mt-4 text-slate-400 text-center">No todos yet — add one above.</p>;
 
     return (
@@ -11,3 +11,5 @@ export default function TodoList({ todos, onToggle, onDelete, onEdit }) {
         </div>
     );
 }
+
+export default TodoList;

@@ -3,7 +3,7 @@ import API from "../api";
 import AddTodoForm from "../components/AddTodoForm";
 import TodoList from "../components/TodoList";
 
-export default function Home() {
+function Home() {
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -95,3 +95,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

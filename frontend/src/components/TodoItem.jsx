@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { jsPDF } from "jspdf";
 
-export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
+function TodoItem({ todo, onToggle, onDelete, onEdit }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(todo.title);
   const [editedDesc, setEditedDesc] = useState(todo.description || '');
@@ -151,3 +151,5 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
     </div>
   );
 }
+
+export default TodoItem;

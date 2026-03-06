@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function AddTodoForm({ onAdd }) {
+function AddTodoForm({ onAdd }) {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -90,3 +90,5 @@ export default function AddTodoForm({ onAdd }) {
     </div>
   );
 }
+
+export default AddTodoForm;

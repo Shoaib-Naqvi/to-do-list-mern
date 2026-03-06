@@ -1,6 +1,8 @@
 import Home from "./pages/Home";
 import "./index.css";
 
-export default function App() {
+function App() {
   return <Home />;
 }
+
+export default App;
