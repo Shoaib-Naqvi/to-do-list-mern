@@ -14,7 +14,9 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URI =
   process.env.MONGO_URI || "mongodb://localhost:27017/To-do_List_db";
 
-connectDB(MONGO_URI);
+if (process.env.NODE_ENV !== "production" && !process.env.NETLIFY) {
+  connectDB(MONGO_URI);
+}
 
 app.use("/api/todos", todoRoutes);
 
